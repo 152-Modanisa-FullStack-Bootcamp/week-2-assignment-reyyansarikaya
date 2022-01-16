@@ -32,3 +32,11 @@ For the favorite page, You need to design a page as seen in the picture below.
 Favorite page should list the videos whose favorite field are set to true in the data.
 
 ![HomePage](./pictures/favorites-page.png)
+
+## Home page, Favorite page and Watch page
+
+![HomePage](./pictures/main_page_assignment.PNG)
+
+![HomePage](./pictures/favorites_page_assignment.PNG)
+
+![HomePage](./pictures/watch_page.PNG)
