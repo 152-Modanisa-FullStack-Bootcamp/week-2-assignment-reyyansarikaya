@@ -15,24 +15,20 @@
 <script>
 import Header from "../components/Header";
 import Video from "../components/Video";
-import axios from "axios";
+import {mapState} from 'vuex';
 
 export default {
   name: "MainPage",
   components: {
     Header,
     Video,
-
   },
-  data() {
-    return {
-      videos: []
-    }
+  mounted() {
+    this.$store.dispatch('loadVideos')
   },
-  async mounted() {
-    this.videos = await axios.get("https://my-json-server.typicode.com/modanisa/bootcamp-video-db/videos").then(res => res.data)
-    console.log(this.videos)
-  }
+  computed: mapState([
+    'videos'
+  ]),
 }
 </script>
 
