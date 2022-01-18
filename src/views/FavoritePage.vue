@@ -2,7 +2,7 @@
   <div class="favoriteMain">
     <Header class="header"></Header>
     <Video id="video"
-           v-for="video in videos.filter(video=>video.favorite)"
+           v-for="video in $store.state.videos.filter(video=>video.favorite)"
            :video="video"
            :key="video.id"
 
@@ -14,20 +14,13 @@
 <script>
 import Video from "../components/Video";
 import Header from "../components/Header";
-import {mapState} from 'vuex';
 
 export default {
   name: "FavoritePage",
   components: {
     Video,
     Header
-  },
-  mounted() {
-    this.$store.dispatch('loadVideos')
-  },
-  computed: mapState([
-    'videos'
-  ]),
+  }
 }
 </script>
 
